@@ -24,10 +24,8 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
-  const arrayTwo = arr.filter((element)=>{
-    return (!isNaN(element));
-  });
-  return arrayTwo;
+  let newArry = arr.filter( value => (typeof(value)=== 'number')); 
+  return newArry;  
 };
 
 
@@ -58,10 +56,9 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-  const arrayFour= arr.filter(element =>{
-    return (element%2);
-  })
-  return arrayFour;
+  let odd = arr.filter(n => (n % 2));
+  return odd;
+
 };
 
 
@@ -78,11 +75,9 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  const regex= /[aeiou]+/mg;
-  const arrayFive = arr.filter(element=>{
-    return element.match(regex)
-  });
-  return arrayFive;
+  let arrayFo = arr.filter(value => /[aeiou]/.test(value)); 
+return arrayFo;
+
 };
 
 

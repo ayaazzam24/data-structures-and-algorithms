@@ -50,7 +50,10 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 
 const validateWord = (word) => {
   // Solution code here...
+  let reg=/^[A-Z a-z]{5,10}$/;
+  return reg.test(word);
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -62,7 +65,11 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  let reg=/[A-Z a-z]\d/;
+  return reg.test(string);
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -82,7 +89,10 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  let reg=/^\w+\.?\w+@\w+(.net|.com|.org)\b/;
+  return reg.test(email);
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -107,7 +117,11 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  let reg=/^((\(\d{3}\))|\d{3})(\s|\-)?\d{3}(\s|\-)?\d{4}$/;
+  return reg.test(phoneNumber);
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
